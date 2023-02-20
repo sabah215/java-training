@@ -1,11 +1,11 @@
-package com.q1;
+package com.q58;
 
-public class Employee {
+public class Employee implements Cloneable{
     private int id;
     private String name;
     private int salary;
 
-    public Employee(int id, String name, int salary){
+    public Employee(int id, String name, int salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
@@ -35,14 +35,7 @@ public class Employee {
         return salary;
     }
 
-    @Override
-    public String toString(){
-        return "Id: " + getId() + " Name: " + getName()+" Salary: " + getSalary();
-    }
-
-    @Override
-    public boolean equals(Object o){
-        Employee e = (Employee) o;
-        return this.getSalary() == e.getSalary();
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 }
