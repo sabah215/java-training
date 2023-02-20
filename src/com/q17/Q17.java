@@ -8,3 +8,4 @@ public class Q17 {
       //  m1();
     }
 }
+//m1 cannot be called because non-static method cannot be called from static method.
